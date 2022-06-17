@@ -1,0 +1,20 @@
+CREATE TABLE bookstore_inventory (id INTEGER PRIMARY KEY, title TEXT, quantity INTEGER, genre TEXT, aisle INTEGER, rating INTEGER);
+INSERT INTO bookstore_inventory VALUES (1, "A court of thorns and roses", 10, "fantasy", 2, 5);
+INSERT INTO bookstore_inventory VALUES (2, "A court of mist and fury", 8, "fantasy", 2, 5);
+INSERT INTO bookstore_inventory VALUES (3, "A court of wings and ruin", 12, "fantasy", 2, 5);
+INSERT INTO bookstore_inventory VALUES (4, "A court of frost and starlight", 9, "fantasy", 2, 4);
+INSERT INTO bookstore_inventory VALUES (5, "A court of silver flames", 5, "fantasy", 2, 4);
+INSERT INTO bookstore_inventory VALUES (6, "People's history of the united states", 6, "history", 5, 5);
+INSERT INTO bookstore_inventory VALUES (7, "A touch of darkness", 8, "romance", 3, 5);
+INSERT INTO bookstore_inventory VALUES (8, "A touch of ruin", 12, "romance", 3, 3.5);
+INSERT INTO bookstore_inventory VALUES (9, "A touch of malice", 4, "romance", 3, 4);
+INSERT INTO bookstore_inventory VALUES (10, "Becoming", 3, "biographies", 1, 5);
+INSERT INTO bookstore_inventory VALUES (11, "The invention of murder", 6, "true crime", 4, 4);
+INSERT INTO bookstore_inventory VALUES (12, "Song of achilles", 12, "fiction", 6, 5);
+INSERT INTO bookstore_inventory VALUES (13, "From blood and ash", 9, "fantasy", 2, 5);
+INSERT INTO bookstore_inventory VALUES (14, "A kingdom of flesh and fire", 8, "fantasy", 2, 5);
+INSERT INTO bookstore_inventory VALUES (15, "the crown of gilded bones", 4, "fantasy", 2, 5);
+INSERT INTO bookstore_inventory VALUES (16, "the war of two queens", 2, "fantasy", 2, 5);
+
+SELECT genre, SUM(quantity) from bookstore_inventory GROUP BY genre
+
